@@ -101,7 +101,7 @@ public class ReleaseStack_ThemeTestWPCom extends ReleaseStack_WPComBase {
         mCountDownLatch = new CountDownLatch(1);
         mNextEvent = TestEvents.FETCHED_STARTER_DESIGNS;
         mDispatcher.dispatch(ThemeActionBuilder.newFetchStarterDesignsAction(
-                new ThemeStore.FetchStarterDesignsPayload(400f, 2f)));
+                new ThemeStore.FetchStarterDesignsPayload(400f, 2f, "original", "single-page")));
         assertTrue(mCountDownLatch.await(TestUtils.DEFAULT_TIMEOUT_MS, TimeUnit.MILLISECONDS));
     }
 
@@ -170,6 +170,7 @@ public class ReleaseStack_ThemeTestWPCom extends ReleaseStack_WPComBase {
         assertFalse(event.isError());
         assertNotNull(event.designs);
         assertFalse(event.designs.isEmpty());
+        assertFalse(event.categories.isEmpty());
         mCountDownLatch.countDown();
     }
 
