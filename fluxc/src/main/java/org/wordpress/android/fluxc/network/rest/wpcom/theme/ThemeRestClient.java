@@ -31,7 +31,6 @@ import org.wordpress.android.fluxc.store.ThemeStore.FetchedWpComThemesPayload;
 import org.wordpress.android.fluxc.store.ThemeStore.SiteThemePayload;
 import org.wordpress.android.fluxc.store.ThemeStore.ThemesError;
 import org.wordpress.android.util.AppLog;
-import org.wordpress.android.util.LanguageUtils;
 import org.wordpress.android.util.StringUtils;
 
 import java.util.ArrayList;

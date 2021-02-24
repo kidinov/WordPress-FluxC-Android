@@ -20,7 +20,7 @@ data class StarterDesign(
     val theme: String?,
     val preview: String,
     @SerializedName("preview_tablet") val previewTablet: String,
-    @SerializedName("preview_mobile") val previewMobile: String,
+    @SerializedName("preview_mobile") val previewMobile: String
 ) : Parcelable
 
 @Parcelize
